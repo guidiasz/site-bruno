@@ -106,7 +106,7 @@ h1 + p {
     line-height: 1.4;
 }
 
-@media (max-height: 560px) {
+@media (max-height: 559px) {
 
     .foto-perfil {
         margin-top: 16px;
