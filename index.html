@@ -56,9 +56,12 @@
 
 <script>
 function myFunction() {
-  var w = document.documentElement.clientWidth;
+  var w = window.innerHeight;
   var h = document.documentElement.clientHeight;
-  document.getElementById("demo").innerHTML = "Width: " + w + "<br>Height: " + h;
+  var a = window.outerHeight;
+  var b = screen.height;
+  var c = screen.availHeight;
+  document.getElementById("demo").innerHTML = "window.innerHeight: " + w + "<br>Height: " + h + "<br>outerHeight: " + a + "<br> screen.height: " + b + "<br> screen.Availheight: " + c;
 }
 </script>
 
