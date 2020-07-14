@@ -1,4 +1,4 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -40,39 +40,5 @@
 
     </section>
     
-</body>
-</html-->
-<!DOCTYPE html>
-<html>
-<body>
-
-<p>Click the button to display this frame's height and width.</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<p><strong>Note:</strong> The innerWidth and innerHeight properties are not supported in IE8 and earlier.</p>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-  var w = window.innerHeight;
-  var h = document.documentElement.clientHeight;
-  var a = window.outerHeight;
-  var b = screen.height;
-  var c = screen.availHeight;
-  document.getElementById("demo").innerHTML = "window.innerHeight: " + w + "<br>Height: " + h + "<br>outerHeight: " + a + "<br> screen.height: " + b + "<br> screen.Availheight: " + c;
-}
-</script>
-
-<style>
-    body {
-        height: 200vh;
-    }
-    button {
-        margin-top: 100vh;
-    }
-</style>
-
 </body>
 </html>
