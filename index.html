@@ -56,11 +56,20 @@
 
 <script>
 function myFunction() {
-  var w = window.innerWidth;
-  var h = window.innerHeight;
+  var w = document.documentElement.clientWidth;
+  var h = document.documentElement.clientHeight;
   document.getElementById("demo").innerHTML = "Width: " + w + "<br>Height: " + h;
 }
 </script>
+
+<style>
+    body {
+        height: 200vh;
+    }
+    button {
+        margin-top: 100vh;
+    }
+</style>
 
 </body>
 </html>
