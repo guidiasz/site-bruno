@@ -113,4 +113,8 @@ h1 + p {
         width: 180px;
     }
     
+    .botao-whatsapp {
+        margin-top: 16px;
+    }
+    
 }
