@@ -34,7 +34,8 @@ nav ul li:last-child a {
 }
 
 .foto-perfil {
-    margin-top: 32px;
+    width: 180px;
+    margin-top: 16px;
     border-radius: 50%;
     border: solid 2px #222;
 }
