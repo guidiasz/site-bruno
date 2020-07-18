@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     color: #222;
@@ -52,6 +56,14 @@ nav ul a {
     font-size: 4.26vw;
 }
 
+a:focus {
+    outline: none;
+}
+
+nav ul a:focus {
+    color: #bd5319;
+}
+
  nav ul li:first-child a {
     padding-left: 0px;
 }
@@ -100,6 +112,14 @@ h1 + p {
     background-color: inherit;
     padding: 16px 8px;
     cursor: pointer;
+    color: #BD5319;
+    transition: .3s;
+}
+
+.botao-whatsapp:hover {
+    transition: .3s;
+    background-color: #BD5319;
+    color: #f9f9f9;
 }
 
 .botao-whatsapp img {
@@ -113,7 +133,7 @@ h1 + p {
     vertical-align: middle;
     font-family: 'Kadwa';
     font-size: 16px;
-    color:#BD5319;
+    color:inherit;
     line-height:0;
 }
 
@@ -163,6 +183,9 @@ h3 + p {
 
 .experiencias h4 {
     margin-top: 32px;
+}
+
+.experiencias h4 span {
     color: #BD5319;
 }
 
@@ -260,6 +283,9 @@ h3 + p {
 
 .curso {
     margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 380px;
     border: solid 2px #222;
     border-radius: 2px;
     box-sizing: border-box;
@@ -283,6 +309,7 @@ h3 + p {
 
 .descricao-curso h5 {
     font-size: 14px;
+    color: #978D85;
     margin-top: 2px;
 }
 
@@ -291,10 +318,10 @@ h3 + p {
 }
 
 .claro .logo-universidade {
-    background-color: inherit;
+    background-color: #f9f9f9;
 }
 
-.claro .descricao-curso {
+.claro  {
     background-color: #00356B;
 }
 
@@ -306,7 +333,7 @@ h3 + p {
     color: #ddd;
 }
 
-.contato h2+p {
+.contato .wrapper>p {
     margin-top: 27px;
     margin-bottom: 32px;
 }
@@ -331,7 +358,9 @@ h3 + p {
 }
 
 footer {
-    padding: 16px 32px 32px 16px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px 16px 16px;
     background-color: #222;
     font-size: 14px;
     text-align: center;
@@ -340,7 +369,15 @@ footer {
 
 footer img {
     width: 96px;
-    margin-bottom: 16px;
+}
+
+footer p {
+    line-height: 1.5;
+}
+
+footer p a {
+    color: #63AAFF;
+    text-decoration: underline;
 }
 
 footer a {
@@ -353,15 +390,142 @@ footer .flaticon {
     margin-top: 8px;
 }
 
+footer .hr-fraco {
+    border-color: #2a2a2a;
+    margin: 16px 0;
+}
+
 @media screen and (max-width: 359px) {
     header img {
         display: none;
     }
 }
 
+@media screen and (min-width: 480px) {
+    header img {
+        width: calc(66px + 30 * (100vw - 480px) / 520);
+        max-width: 96px;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+    
+    nav ul a li {
+        font-size: calc(20px + 4 * (100vw - 480px) / 520);
+    }
+
+    nav ul a {
+        flex-grow: 0;
+        padding: 16px 8px;
+    }
+}
+
 @media screen and (min-width: 1000px) {
-    nav ul li a {
-        font-size: 24px
+    body {
+        font-size: 20px
+    }
+    
+    .foto-perfil {
+        width: 256px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .botao-whatsapp img {
+        width: 20px;
+    }
+
+    .botao-whatsapp span {
+        font-size: 20px;
+    }
+
+    .descricao {
+        width: 100%;
+        max-width: 785px;
+        min-width: 534px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .experiencias {
+        width: 100%;
+        max-width: 785px;
+        min-width: 534px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .icone-titulo {
+        width: 30px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .educacao h3::before {
+        top: 12px;
+    }
+
+    h3 + p {
+        font-size: 17.5px;
+    }
+
+    .item-formacao h5 {
+        font-size: 20px;
+    }
+
+    .item-formacao p {
+        font-size: 17.5px;
+    }
+
+    .item-formacao img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .item-formacao p + p {
+        font-size: 15px;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .curso {
+        min-width: 376px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .contato {
+        width: 100%;
+        max-width: 785px;
+        min-width: 534px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contato .wrapper>p {
+        margin: 0;
+    }
+
+    .contato .wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 32px;
+    }
+    .contato .item img {
+        width: 22.5px;
     }
 }
 
@@ -375,5 +539,23 @@ footer .flaticon {
     .botao-whatsapp {
         margin-top: 16px ;
     }
+
     
 }
+
+.fadeInDown {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+    @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    } 
