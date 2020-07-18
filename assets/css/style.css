@@ -8,6 +8,10 @@ body {
     background-color: #f9f9f9;
 }
 
+header {
+    background-color: inherit;    
+}
+
 main {
     padding: 0 32px;
 }
@@ -20,7 +24,19 @@ main {
     line-height: 1.4;
 }
 
-header, nav {
+.sticky {
+    position: fixed;
+    top: 0;
+    width:100%;
+    box-sizing:border-box;
+    z-index:1;
+}  
+
+header div {
+    border-bottom: solid 0.5px #eeeeee; 
+}
+
+header div, nav {
     display: flex;
 }
 
@@ -540,7 +556,14 @@ footer .hr-fraco {
         margin-top: 16px ;
     }
 
-    
+    .bio .hr-fraco {
+        margin-top: 16px;
+        margin-bottom: 0px;
+    }
+
+    .descricao {
+        margin-top: 16px;
+    }
 }
 
 .fadeInDown {
