@@ -36,12 +36,11 @@ header div {
     border-bottom: solid 0.5px #eeeeee; 
 }
 
-header div, nav {
+header, nav {
     display: flex;
 }
-
 nav {
-    width: 100%;
+    width:100%;
 }
 
 nav ul {
@@ -57,6 +56,7 @@ header {
 }
 
 header img {
+    margin-right: 8px;
     text-align: center;
     width: 13.86vw;
 }
@@ -420,6 +420,7 @@ footer .hr-fraco {
 @media screen and (min-width: 480px) {
     header img {
         width: calc(66px + 30 * (100vw - 480px) / 520);
+        margin-right: 0;
         max-width: 96px;
     }
 
@@ -547,6 +548,14 @@ footer .hr-fraco {
 
 @media (max-height: 560px) {
 
+    header {
+        display: block;
+    }
+    
+    nav ul {
+        justify-content: center;
+    }
+
     .foto-perfil {
         margin-top: 0px;
         width: 180px;
@@ -566,19 +575,30 @@ footer .hr-fraco {
     }
 }
 
-.fadeInDown {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    }
-    @-webkit-keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-    }
-    @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-    } 
+/* Animação */
+
+[data-anime] {
+    opacity: 0;
+    transition: .3s;
+  }
+  
+  [data-anime="top"] {
+    transform: translate3d(0, -50px, 0);
+  }
+  
+  [data-anime="bottom"] {
+    transform: translate3d(0, 50px, 0);
+  }
+  
+  [data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+  }
+  
+  [data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+  }
+  
+  [data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0, 0);
+  }
