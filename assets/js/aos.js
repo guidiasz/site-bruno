@@ -18,7 +18,7 @@ const target = body.querySelectorAll('[data-anime]');
 const targetGraf = body.querySelector('.graficos');
 
 function animeScroll() {
-  const windowTop = window.pageYOffset + (window.innerHeight * 0.9 );
+  const windowTop = window.pageYOffset + (window.innerHeight * 0.85 );
     target.forEach(function(element) {
         if( windowTop > element.offsetTop) {
             element.classList.add('animate');
@@ -30,7 +30,7 @@ function animeScroll() {
 }
 
 function animeScrollGrafico() {
-  const windowTop = window.pageYOffset + (window.innerHeight * 0.9 );
+  const windowTop = window.pageYOffset + (window.innerHeight * 0.85 );
   if(windowTop > targetGraf.offsetTop) {
     const elements = targetGraf.querySelectorAll('[data-grafico]');
     elements[0].classList.add('anima');
