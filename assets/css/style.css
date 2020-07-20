@@ -730,8 +730,8 @@ footer .hr-fraco {
     align-content: center;
     justify-content: center;
 	position:fixed;
-	width:64px;
-	height:64px;
+	width:48px;
+	height:48px;
 	bottom:64px;
 	right:32px;
 	background-color:#25d366;
@@ -741,5 +741,5 @@ footer .hr-fraco {
 }
 
 .float img {
-    width: 32px;
+    width: 28px;
 }
