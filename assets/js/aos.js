@@ -12,12 +12,13 @@ const debounce = function(func, wait, immediate) {
     if (callNow) func.apply(context, args);
   };
 };
+const body = document.querySelector('body');
 
-
-const target = document.querySelectorAll('[data-anime]');
+const target = body.querySelectorAll('[data-anime]');
+const targetGraf = body.querySelector('.graficos');
 
 function animeScroll() {
-  const windowTop = window.pageYOffset + (window.innerHeight * 0.75 );
+  const windowTop = window.pageYOffset + (window.innerHeight * 0.9 );
     target.forEach(function(element) {
         if( windowTop > element.offsetTop) {
             element.classList.add('animate');
@@ -28,8 +29,36 @@ function animeScroll() {
     });
 }
 
+function animeScrollGrafico() {
+  const windowTop = window.pageYOffset + (window.innerHeight * 0.9 );
+  if(windowTop > targetGraf.offsetTop) {
+    const elements = targetGraf.querySelectorAll('[data-grafico]');
+    elements[0].classList.add('anima');
+    elements[1].classList.add('anima');
+    elements[2].classList.add('anima');
+  }
+  else {
+    const elements = targetGraf.querySelectorAll('[data-grafico]');
+    elements[0].classList.remove('anima');
+    elements[1].classList.remove('anima');
+    elements[2].classList.remove('anima');
+  }
+  // targetGraf.forEach(function(element) {
+  //   console.log(element.offsetTop)
+  //       if( windowTop > element.offsetTop) {
+  //           element.querySelector('[data-grafico]').classList.add('anima');
+  //       }
+  //       else {
+  //         console.log('entrou')
+  //           element.querySelector('[data-grafico]').classList.remove('anima');
+  //       }
+  //   });
+}
+
 animeScroll();
+animeScrollGrafico();
 
 window.addEventListener('scroll', debounce(function(){
     animeScroll();
-}, 50) )
+    animeScrollGrafico();
+}, 50) );

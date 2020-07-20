@@ -40,7 +40,7 @@
             <p class="descricao">Busco um lugar para desempenhar minhas habilidades, trabalhar em equipe e gerar valor para a organização.</p>
         </section>
     
-        <hr class="hr-forte" id="experiencias">
+        <hr class="hr-forte" id="experiencias" data-anime="top">
     
         <section class="experiencias">
             <div data-anime="top">
@@ -69,37 +69,83 @@
                 <img src="./assets/imgs/educacao.svg" class="icone-titulo" alt="icone diploma">
                 <h2>Educação</h2>
             </div>
+
+            <div class="duas-colunas">
+
+                <section class="formacao">
+                    <h3 data-anime="left">Formação</h3>
+                    <div data-anime="left">
+                        <div class="item-formacao">
+                            <img src="./assets/imgs/cebrae.svg" alt="logo CEBRAC">
+                            <div>
+                                <h5>Assistente Administrativo</h5>
+                                <p>Centro Brasileiro de Cursos <span>(CEBRAC)</span></p>
+                                <p>2014 - 2015</p>
+                            </div>
+                        </div>
+                        <hr class="hr-fraco">
+                        <div class="item-formacao">
+                            <img src="./assets/imgs/genoma.svg" alt="logo Colegio Genoma Sistema de Ensino">
+                            <div>
+                                <h5>Ensino Médio</h5>
+                                <p>Colégio Genoma</p>
+                                <p>2016 - 2017</p>
+                            </div>
+                        </div>
+                        <hr class="hr-fraco">
+                        <div class="item-formacao">
+                            <img src="./assets/imgs/ufjf.svg" alt="logo UFJF-GV">
+                            <div>
+                                <h5>Bacharelado em Direito</h5>
+                                <p><span>UFJF - GV</span></p>
+                                <p>2019 - 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hr-fraco">
+                </section> <!--fim da subsection formacao-->
     
-            <section class="formacao" data-anime="left">
-                <h3>Formação</h3>
-                <div class="item-formacao">
-                    <img src="./assets/imgs/cebrae.svg" alt="logo CEBRAC">
-                    <div>
-                        <h5>Assistente Administrativo</h5>
-                        <p>Centro Brasileiro de Cursos <span>(CEBRAC)</span></p>
-                        <p>2014 - 2015</p>
+                <section class="idiomas" >
+                    <h3 data-anime="left">Idiomas</h3>
+                    <div class="graficos" data-anime="right">
+                        
+                        <div class="wrapper">
+                            <section class="grafico">
+                                <svg width="124" height="124" viewBox="0 0 124 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="62" cy="62" r="60" stroke="#DDDDDD" stroke-width="4"/>
+                                    <circle cx="62" cy="62" r="60" stroke="#00356B" stroke-width="4" data-grafico="ingles"/>
+                                </svg>
+                                <div class="sinopse">
+                                    <h4>Inglês</h4>
+                                    <h5>Avançado</h5>
+                                </div>
+                            </section>
+                            <section class="grafico">
+                                <svg width="124" height="124" viewBox="0 0 124 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="62" cy="62" r="60" stroke="#DDDDDD" stroke-width="4"/>
+                                    <circle cx="62" cy="62" r="60" stroke="#286DC0" stroke-width="4" data-grafico="frances"/>
+                                </svg>
+                                <div class="sinopse">
+                                    <h4>Francês</h4>
+                                    <h5>Intermediário</h5>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        <section class="grafico">
+                            <svg width="124" height="124" viewBox="0 0 124 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="62" cy="62" r="60" stroke="#DDDDDD" stroke-width="4"/>
+                                <circle cx="62" cy="62" r="60" stroke="#63AAFF" stroke-width="4" data-grafico="espanhol"/>
+                            </svg>
+                            <div class="sinopse">
+                                <h4>Espanhol</h4>
+                                <h5>Iniciante</h5>
+                            </div>
+                        </section>
                     </div>
-                </div>
-                <hr class="hr-fraco">
-                <div class="item-formacao">
-                    <img src="./assets/imgs/genoma.svg" alt="logo Colegio Genoma Sistema de Ensino">
-                    <div>
-                        <h5>Ensino Médio</h5>
-                        <p>Colégio Genoma</p>
-                        <p>2016 - 2017</p>
-                    </div>
-                </div>
-                <hr class="hr-fraco">
-                <div class="item-formacao">
-                    <img src="./assets/imgs/ufjf.svg" alt="logo UFJF-GV">
-                    <div>
-                        <h5>Bacharelado em Direito</h5>
-                        <p><span>UFJF - GV</span></p>
-                        <p>2019 - 2023</p>
-                    </div>
-                </div>
-                <hr class="hr-fraco">
-            </section> <!--fim da subsection formacao-->
+    
+                </section> <!--fim da subsection idiomas-->
+            </div>
     
             <section class="cursos">
                 <h3 data-anime="left">Cursos</h3>
@@ -164,11 +210,11 @@
             <hr class="hr-forte" id="contato">
     
             <section class="contato">
-                <div data-anime="top">
-                    <img src="./assets/imgs/envelope.svg" class="icone-titulo" style="color:black" alt="icone envelope">
+                <div> 
+                    <img src="./assets/imgs/envelope.svg" class="icone-titulo" style="color:black" alt="icone envelope" data-anime="top">
                     <h2>Contato</h2>
                 </div>
-                <div class="wrapper" data-anime="left">
+                <div class="wrapper">
                     <p>Fale comigo via Whatsapp <a href="#">clicando aqui.</a></p>
 
                     <div>
@@ -188,6 +234,10 @@
                 </div>
             </section><!--fim da section contato-->
     </main>
+
+    <!-- <a href="#" class="float">
+        <img src="./assets/imgs/whatsapp-claro.svg" alt="logo whatsapp">
+    </a> -->
 
     <footer>
         <img src="./assets/imgs/logo-clara.svg" alt="logo">
