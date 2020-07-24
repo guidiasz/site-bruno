@@ -64,9 +64,11 @@ header img {
 nav ul a {
     padding: 16px 0 16px 0;
     flex-grow:1;
+    /* font-size: 16px; */
     font-style: italic;
     color: inherit;
     text-decoration: none;
+    /* font-size: calc(16px + 8 * ((100vw - 320px) / 680)); */
     font-size: 4.26vw;
 }
 
@@ -127,23 +129,19 @@ h1 + p {
     padding: 16px 8px;
     cursor: pointer;
     color: #BD5319;
-    fill: #BD5319;
-    transition: .4s;
+    transition: .3s;
 }
 
 .botao-whatsapp:hover {
-    transition: .4s;
+    transition: .3s;
     background-color: #BD5319;
     color: #f9f9f9;
-    fill: #f9f9f9;
 }
 
-.botao-whatsapp svg {
+.botao-whatsapp img {
     width: 16px;
-    height: auto;
     display: inline-block;
     vertical-align: middle;
-    fill: inherit;
 }
 
 .botao-whatsapp span {
@@ -231,6 +229,18 @@ h3 + p {
 .experiencias li::marker {
     padding-bottom: 50%;
 }
+
+/*.experiencias li::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: -8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000;
+}*/
 
 .educacao h3 {
     position: relative;
@@ -454,9 +464,8 @@ footer .hr-fraco {
         font-size: 30px;
     }
 
-    .botao-whatsapp svg {
+    .botao-whatsapp img {
         width: 20px;
-        height: auto;
     }
 
     .botao-whatsapp span {
@@ -681,7 +690,8 @@ footer .hr-fraco {
     stroke-dashoffset: 377;
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
-    transition: 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* transition: .8s cubic-bezier(0.9, 0, 0.3, 1.3); */
+    transition: 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
  
   [data-grafico="ingles"].anima {
