@@ -55,7 +55,7 @@ header {
     text-align: center;
 }
 
-header svg {
+header img {
     margin-right: 8px;
     text-align: center;
     width: 13.86vw;
@@ -129,7 +129,6 @@ h1 + p {
     padding: 16px 8px;
     cursor: pointer;
     color: #BD5319;
-    fill: #BD5319;
     transition: .3s;
 }
 
@@ -137,14 +136,12 @@ h1 + p {
     transition: .3s;
     background-color: #BD5319;
     color: #f9f9f9;
-    fill: #f9f9f9;
 }
 
-.botao-whatsapp svg {
+.botao-whatsapp img {
     width: 16px;
     display: inline-block;
     vertical-align: middle;
-    fill: inherit;
 }
 
 .botao-whatsapp span {
@@ -267,7 +264,7 @@ h3 + p {
     margin-top: 30px;
 }
 
-.item-formacao img, .item-formacao svg {
+.item-formacao img {
     width: 64px;
     height: 64px;
     border-radius: 50%;
@@ -313,7 +310,6 @@ h3 + p {
 .logo-universidade{
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 128px;
     background-color: #00356B;
 }
@@ -369,7 +365,7 @@ h3 + p {
     margin-bottom: 64px;
 }
 
-.contato .item img, .contato .item svg {
+.contato .item img {
     margin-right: 16px;
 }
 
@@ -387,9 +383,8 @@ footer {
     color: #f9f9f9;
 }
 
-footer svg {
+footer img {
     width: 96px;
-    height: 96px;
 }
 
 footer p {
@@ -417,7 +412,7 @@ footer .hr-fraco {
 }
 
 @media screen and (max-width: 359px) {
-    header svg {
+    header img {
         display: none;
     }
 }
@@ -436,7 +431,7 @@ footer .hr-fraco {
 }
 
 @media screen and (min-width: 480px) {
-    header svg {
+    header img {
         width: calc(66px + 30 * (100vw - 480px) / 520);
         margin-right: 0;
         max-width: 96px;
@@ -469,7 +464,7 @@ footer .hr-fraco {
         font-size: 30px;
     }
 
-    .botao-whatsapp svg {
+    .botao-whatsapp img {
         width: 20px;
     }
 
@@ -493,13 +488,8 @@ footer .hr-fraco {
         margin-right: auto;
     }
 
-    svg {
-        height: auto;
-    }
-
-    .icone-titulo{
+    .icone-titulo {
         width: 30px;
-        height: auto;
     }
 
     h2 {
@@ -526,7 +516,7 @@ footer .hr-fraco {
         font-size: 17.5px;
     }
 
-    .item-formacao img, .item-formacao svg {
+    .item-formacao img {
         width: 80px;
         height: 80px;
     }
@@ -585,7 +575,7 @@ footer .hr-fraco {
         justify-content: space-between;
         margin-top: 32px;
     }
-    .contato .item img, .contato .item svg {
+    .contato .item img {
         width: 22.5px;
     }
 }
