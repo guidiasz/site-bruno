@@ -48,7 +48,7 @@
             </div>
     
             <a class="botao-whatsapp" target="_blank" href="http://wppredirect.tk/go/?p=553388807104&m=">
-                <img src="./assets/imgs/whatsapp.svg" alt="whatsapp">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.669 2.366A7.866 7.866 0 008.033 0C3.643 0 .07 3.618.067 8.065a8.13 8.13 0 001.063 4.033L0 16.278l4.223-1.122a7.88 7.88 0 003.807.982h.004c4.39 0 7.964-3.619 7.966-8.066a8.067 8.067 0 00-2.331-5.706zm-5.636 12.41h-.002a6.552 6.552 0 01-3.37-.935l-.242-.145-2.506.665.669-2.474-.158-.253a6.749 6.749 0 01-1.012-3.568c.001-3.696 2.972-6.704 6.624-6.704 1.769 0 3.431.7 4.681 1.966a6.707 6.707 0 011.938 4.743c-.002 3.697-2.972 6.704-6.622 6.704zm3.633-5.022c-.2-.1-1.178-.588-1.36-.655-.183-.068-.316-.101-.448.1-.133.202-.515.656-.63.79-.117.135-.233.152-.432.051-.2-.1-.84-.313-1.6-1-.593-.535-.992-1.194-1.108-1.396-.116-.202-.001-.3.087-.411.216-.271.431-.555.498-.69.066-.134.033-.252-.017-.353-.05-.1-.448-1.093-.614-1.496-.161-.393-.325-.34-.448-.346a7.86 7.86 0 00-.381-.007.727.727 0 00-.53.252c-.183.202-.698.69-.698 1.681 0 .992.714 1.95.813 2.085.1.134 1.404 2.17 3.4 3.043.476.208.846.332 1.136.425.476.153.91.131 1.253.08.383-.058 1.178-.488 1.344-.959.166-.47.166-.874.116-.958-.05-.084-.183-.135-.382-.236z"/></svg>
                 <span>Whatsapp</span>
             </a>
             <hr class="hr-fraco">
@@ -261,6 +261,71 @@
         <div class="flaticon">Ícones por <a target="_blank" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> em <a target="_blank" href="https://www.flaticon.com/" title="Flaticon">Flaticon</a></div>
     </footer>
 
-    <script src="./assets/js/aos.js"></script>
+    <script>
+        const debounce = function(func, wait, immediate) {
+  let timeout;
+  return function(...args) {
+    const context = this;
+    const later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
+const body = document.querySelector('body');
+
+const target = body.querySelectorAll('[data-anime]');
+const targetGraf = body.querySelector('.graficos');
+
+function animeScroll() {
+  const windowTop = window.pageYOffset + (window.innerHeight * 0.85 );
+    target.forEach(function(element) {
+        if( windowTop > element.offsetTop) {
+            element.classList.add('animate');
+        }
+        else {
+            element.classList.remove('animate');
+        }
+    });
+}
+
+function animeScrollGrafico() {
+  const windowTop = window.pageYOffset + (window.innerHeight * 0.85 );
+  if(windowTop > targetGraf.offsetTop) {
+    const elements = targetGraf.querySelectorAll('[data-grafico]');
+    elements[0].classList.add('anima');
+    elements[1].classList.add('anima');
+    elements[2].classList.add('anima');
+  }
+  else {
+    const elements = targetGraf.querySelectorAll('[data-grafico]');
+    elements[0].classList.remove('anima');
+    elements[1].classList.remove('anima');
+    elements[2].classList.remove('anima');
+  }
+  // targetGraf.forEach(function(element) {
+  //   console.log(element.offsetTop)
+  //       if( windowTop > element.offsetTop) {
+  //           element.querySelector('[data-grafico]').classList.add('anima');
+  //       }
+  //       else {
+  //         console.log('entrou')
+  //           element.querySelector('[data-grafico]').classList.remove('anima');
+  //       }
+  //   });
+}
+
+animeScroll();
+animeScrollGrafico();
+
+window.addEventListener('scroll', debounce(function(){
+    animeScroll();
+    animeScrollGrafico();
+}, 50) );
+    </script>
 </body>
 </html>

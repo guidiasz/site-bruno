@@ -70,13 +70,14 @@ nav ul a {
     text-decoration: none;
     /* font-size: calc(16px + 8 * ((100vw - 320px) / 680)); */
     font-size: 4.26vw;
+    transition: 0.4s;
 }
 
 a:focus {
     outline: none;
 }
 
-nav ul a:focus {
+nav ul a:hover {
     color: #bd5319;
 }
 
@@ -129,6 +130,7 @@ h1 + p {
     padding: 16px 8px;
     cursor: pointer;
     color: #BD5319;
+    fill: #BD5319;
     transition: .3s;
 }
 
@@ -136,12 +138,16 @@ h1 + p {
     transition: .3s;
     background-color: #BD5319;
     color: #f9f9f9;
+    fill:#f9f9f9;
 }
 
-.botao-whatsapp img {
+.botao-whatsapp svg {
     width: 16px;
+    height: auto;
     display: inline-block;
     vertical-align: middle;
+    transition: .3s;
+    fill: inherit;
 }
 
 .botao-whatsapp span {
@@ -464,7 +470,7 @@ footer .hr-fraco {
         font-size: 30px;
     }
 
-    .botao-whatsapp img {
+    .botao-whatsapp svg {
         width: 20px;
     }
 
