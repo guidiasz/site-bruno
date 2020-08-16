@@ -28,9 +28,9 @@
         <a href="#"><img src="./assets/imgs/logo.svg" alt="logo"></a>
         <nav>
             <ul>
-                <a href="#experiencias"><li>Experiências</li></a>
-                <a href="#educacao"><li>Educação</li></a>
-                <a href="#contato"><li>Contato</li></a>
+                <a href="#experiencias" onclick="evento('Clicou experiencias', 'header', 'clique');"><li>Experiências</li></a>
+                <a href="#educacao" onclick="evento('Clicou educacao', 'header', 'clique');"><li>Educação</li></a>
+                <a href="#contato" onclick="evento('Clicou contato', 'header', 'clique');"><li>Contato</li></a>
             </ul>
         </nav>
     </header>
@@ -47,7 +47,7 @@
                 <p>Auxiliar Jurídico</p>
             </div>
     
-            <a class="botao-whatsapp" target="_blank" href="http://wppredirect.tk/go/?p=553388807104&m=">
+            <a class="botao-whatsapp" target="_blank" href="http://wppredirect.tk/go/?p=553388807104&m=" onclick="evento('Clicou whatsapp-cta', 'whatsapp', 'clique');">
                 <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.669 2.366A7.866 7.866 0 008.033 0C3.643 0 .07 3.618.067 8.065a8.13 8.13 0 001.063 4.033L0 16.278l4.223-1.122a7.88 7.88 0 003.807.982h.004c4.39 0 7.964-3.619 7.966-8.066a8.067 8.067 0 00-2.331-5.706zm-5.636 12.41h-.002a6.552 6.552 0 01-3.37-.935l-.242-.145-2.506.665.669-2.474-.158-.253a6.749 6.749 0 01-1.012-3.568c.001-3.696 2.972-6.704 6.624-6.704 1.769 0 3.431.7 4.681 1.966a6.707 6.707 0 011.938 4.743c-.002 3.697-2.972 6.704-6.622 6.704zm3.633-5.022c-.2-.1-1.178-.588-1.36-.655-.183-.068-.316-.101-.448.1-.133.202-.515.656-.63.79-.117.135-.233.152-.432.051-.2-.1-.84-.313-1.6-1-.593-.535-.992-1.194-1.108-1.396-.116-.202-.001-.3.087-.411.216-.271.431-.555.498-.69.066-.134.033-.252-.017-.353-.05-.1-.448-1.093-.614-1.496-.161-.393-.325-.34-.448-.346a7.86 7.86 0 00-.381-.007.727.727 0 00-.53.252c-.183.202-.698.69-.698 1.681 0 .992.714 1.95.813 2.085.1.134 1.404 2.17 3.4 3.043.476.208.846.332 1.136.425.476.153.91.131 1.253.08.383-.058 1.178-.488 1.344-.959.166-.47.166-.874.116-.958-.05-.084-.183-.135-.382-.236z"/></svg>
                 <span>Whatsapp</span>
             </a>
@@ -230,7 +230,7 @@
                     <h2>Contato</h2>
                 </div>
                 <div class="wrapper">
-                    <p>Fale comigo via Whatsapp <a target='_blank' href="http://wppredirect.tk/go/?p=553388807104&m=">clicando aqui.</a></p>
+                    <p>Fale comigo via Whatsapp <a target='_blank' href="http://wppredirect.tk/go/?p=553388807104&m=" onclick="evento('Clicou whatsapp-contato', 'whatsapp', 'clique');">clicando aqui.</a></p>
 
                     <div>
                         <div class="item">
@@ -239,7 +239,7 @@
                         </div>
                         <div class="item">
                             <img src="./assets/imgs/arroba.svg" alt="icone email">
-                            <p><a href="mailto:brunodsouzaa@hotmail.com">brunodsouzaa@hotmail.com</a></p>
+                            <p><a href="mailto:brunodsouzaa@hotmail.com" onclick="evento('Clicou email', 'email', 'clique');">brunodsouzaa@hotmail.com</a></p>
                         </div>
                         <div class="item">
                             <img src="./assets/imgs/mapa.svg" alt="icone mapa">
@@ -250,7 +250,7 @@
             </section><!--fim da section contato-->
     </main>
 
-    <a target="_blank" href="http://wppredirect.tk/go/?p=553388807104&m=" class="float">
+    <a target="_blank" href="http://wppredirect.tk/go/?p=553388807104&m=" class="float" onclick="evento('Clicou whatsapp-flutuante', 'whatsapp', 'clique');">
         <img src="./assets/imgs/whatsapp-claro.svg" alt="logo whatsapp">
     </a>
 
@@ -260,7 +260,24 @@
         <p>Site por <a target="_blank" href="http://wppredirect.tk/go/?p=5533984254729&m=">Guilherme Dias</a> com 💙</p>
         <div class="flaticon">Ícones por <a target="_blank" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> em <a target="_blank" href="https://www.flaticon.com/" title="Flaticon">Flaticon</a></div>
     </footer>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158310206-3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'UA-158310206-3');
+    </script>
+
+    <!-- registra evento no google analytics -->
+    <script>
+        function evento(nomeEvento, categoriaEvento, tipoEvento){
+            gtag('event', nomeEvento, { 'send_to': 'UA-158310206-3', 'event_category': categoriaEvento,  'event_label': tipoEvento,});
+        }
+    </script>
+
+    <!-- animacoes html -->
     <script>
         const debounce = function(func, wait, immediate) {
   let timeout;
